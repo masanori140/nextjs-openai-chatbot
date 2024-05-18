@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "chainlit_demo"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+chainlit = "^1.1.101"
+langchain = "^0.1.20"
+openai = "^1.30.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+mypy = "^1.10.0"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ['py312']
+line-length = 120
+exclude = "(\\.ipynb|\\.venv)"
+
+[tool.isort]
+line_length = 120
+multi_line_output = 3
+include_trailing_comma = true
+skip = [".venv"]
+
+[tool.mypy]
+python_version = "3.12"
+no_strict_optional = true
+ignore_missing_imports = true
+check_untyped_defs = true
+exclude = [".venv"]
+
+[tool.flake8]
+max-line-length = 120
+max-complexity = 10
+ignore = ["E203", "W503"]
