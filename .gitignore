@@ -1,7 +1,35 @@
-# Python
+# cdktf
+*.d.ts
+*.js
+*.zip
+node_modules
+cdktf.out
+cdktf.log
+*terraform.*.tfstate*
+.gen
+.terraform
+tsconfig.tsbuildinfo
+!jest.config.js
+!setup.js
+
+# common
+.env
+
+# misc
+.DS_Store
+
+# python
 .venv/
 __pycache__/
 .mypy_cache/
 
-# OpenAPI
-.env
+# rust
+**/target
+
+# terraform
+.terraform.lock.hcl
+.terragrunt-cache
+*.tfstate
+*.tfstate.*
+**/.terraform/*
+**/terraform.tfvars
