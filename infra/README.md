@@ -1,1 +1,0 @@
-# OpenMetaData on Amazon EKS
